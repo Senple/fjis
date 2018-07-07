@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="UTF-8">
+    <title>It's index Page</title>
+    <!-- <link rel =""> -->
+  </head>
+  <body>
+    <form name="text1" method = "GET" action="/name">
+      <input type="text" name="name" maxlength="16"　value=""
+       placeholder="文字を入力してね(16文字まで)"><br>
+      <input type="button" value="やりなおし" onclick="clr()"><br>
+      <input type="submit" value="送信"/>
+      <input type="button" value="挨拶" onclick="greeting()">
+
+      <br>
+    </form>
+
+    <script>
+    function clr(){
+        document.text1.name.value="";
+        console.log("取り消しが行われました。");
+      }
+
+    function greeting(){
+      var Name = document.text1.name.value;
+          alert(Name + "今日も一日頑張りましょう♪");
+          document.text1.name.value="";
+          console.log(Name + "が出力されました");
+          }
+    </script>
+
+  </body>
+
+
+
+  </html>
